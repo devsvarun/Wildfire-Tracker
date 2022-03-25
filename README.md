@@ -1,3 +1,9 @@
+# Wildfire Tracker
+It is a simple react app that uses NASA's [EONET](https://eonet.gsfc.nasa.gov/) API to show live wildfires and volcano erruptions on a interactive map.
+Map is made by using react-gl-map which uses Mapbox-GL.
+
+[Wildfire Tracket](https://devsvarun.github.io/Wildfire-Tracker/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
