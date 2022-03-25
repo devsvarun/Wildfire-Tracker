@@ -25,7 +25,7 @@ function App() {
     };
     Promise.race([
       fetchEvents(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 20000)) // Wait for 1 minute
+      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 20000)) // Wait for 20 seconds
     ]).catch(function fetchFailedHandler() {
       setFetchFailed(true);
       setLoading(false);
