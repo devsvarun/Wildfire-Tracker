@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true);
-      const res = await fetch("https://eonet.sci.gsfc.nasa.gov/api/v3/events");
+      const res = await fetch("https://eonet.gsfc.nasa.gov/api/v3/events");
       const { events } = await res.json();
 
       setEventData(events);
@@ -38,8 +38,8 @@ function App() {
       {fetchFailed ? <FetchFailed /> :
         !loading ?
           <>
-            <Map eventData={eventData} theme={theme} eventList={eventList} closedInfo={closedInfo} 
-            setClosedInfo={setClosedInfo} />
+            <Map eventData={eventData} theme={theme} eventList={eventList} closedInfo={closedInfo}
+              setClosedInfo={setClosedInfo} />
             <ThemeButton theme={theme} setTheme={setTheme} />
             <EventSelector eventList={eventList} setEventList={setEventList} />
           </> : <Loader />
