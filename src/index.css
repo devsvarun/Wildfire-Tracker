@@ -56,8 +56,9 @@ body {
 }
 
 .location-info {
-  position: absolute;
+  position: fixed;
   max-width: 320px;
+  overflow-wrap: break-word;
   top: 10%;
   right: 2%;
   padding: 20px;
@@ -94,6 +95,16 @@ body {
 @media (max-width: 480px) {
   .header h1 {
     font-size: 15px;
+  }
+
+  .location-info {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 325px) {
+  .location-info {
+    max-width: 150px;
   }
 }
 
