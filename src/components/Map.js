@@ -1,12 +1,13 @@
 import * as React from "react";
-import { useState } from "react";
-import { useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
+
 import ReactMapGL, { Marker } from "react-map-gl";
 import LocationMarker from "./LocationMarker";
 import LocationInfoBox from "./LocationInfoBox";
 
 const Map = ({ lat, lng, zoom, eventData, theme, eventList, closedInfo, setClosedInfo }) => {
   const [locationInfo, setLocationInfo] = useState(null);
+  const [info, setInfo] = useState(null)
   const updateClosedInfo = setClosedInfo;
 
   const [viewport, setViewport] = useState({
@@ -23,12 +24,13 @@ const Map = ({ lat, lng, zoom, eventData, theme, eventList, closedInfo, setClose
         <Marker
           latitude={ev.geometry[0].coordinates[1]}
           longitude={ev.geometry[0].coordinates[0]}
-          key={`${ev.categories}-${ev.geometry[0].coordinates[0]}`}
         >
           <LocationMarker
             element={ev.categories[0].id}
-            onClick={() => {setLocationInfo({ id: ev.id, title: ev.title })
-                            updateClosedInfo(false)
+            onClick={() => {
+              setInfo({ id: ev.id, title: ev.title })
+
+
             }}
           />
         </Marker>
@@ -36,9 +38,18 @@ const Map = ({ lat, lng, zoom, eventData, theme, eventList, closedInfo, setClose
     }
     return null;
   }), [eventData, eventList, updateClosedInfo]);
-  
+
+  useEffect(() => {
+    if (info?.id !== locationInfo?.id || !locationInfo) {
+      setLocationInfo(info);
+      updateClosedInfo(false)
+    }
+    else {
+      updateClosedInfo(prev => !prev)
+    }
+  }, [info])
   let mapStyle = "";
-  if (!theme) {
+  if (theme) {
     mapStyle = "mapbox://styles/mapbox/dark-v10";
   }
   else {
@@ -58,7 +69,7 @@ const Map = ({ lat, lng, zoom, eventData, theme, eventList, closedInfo, setClose
       >
         {markers}
       </ReactMapGL>
-      {locationInfo && !closedInfo &&<LocationInfoBox info={locationInfo} setClosedInfo={setClosedInfo} />}
+      {locationInfo && !closedInfo && <LocationInfoBox info={locationInfo} setClosedInfo={setClosedInfo} />}
     </div>
   );
 };

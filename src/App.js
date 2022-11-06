@@ -5,14 +5,15 @@ import Header from "./components/Header";
 import ThemeButton from "./components/ThemeButton";
 import EventSelector from "./components/EventSelector";
 import FetchFailed from "./components/FetchFailed";
+import MapMarkers from "./components/Map";
 
 function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const [eventList, setEventList] = useState(['wildfires']);
   const [fetchFailed, setFetchFailed] = useState(false);
-  const [closedInfo, setClosedInfo] = useState(false);
+  const [closedInfo, setClosedInfo] = useState(true);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -38,10 +39,12 @@ function App() {
       {fetchFailed ? <FetchFailed /> :
         !loading ?
           <>
-            <Map eventData={eventData} theme={theme} eventList={eventList} closedInfo={closedInfo}
+            <MapMarkers eventData={eventData} theme={theme} eventList={eventList} closedInfo={closedInfo}
               setClosedInfo={setClosedInfo} />
-            <ThemeButton theme={theme} setTheme={setTheme} />
-            <EventSelector eventList={eventList} setEventList={setEventList} />
+            <div className="actionmenu">
+              <ThemeButton theme={theme} setTheme={setTheme} />
+              <EventSelector eventList={eventList} setEventList={setEventList} />
+            </div>
           </> : <Loader />
       }
 

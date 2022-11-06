@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .header {
   padding: 10px;
   background-color: firebrick;
@@ -74,42 +75,48 @@ body {
   padding: 5px 0;
 }
 
-.ThemeButton {
-  position: absolute;
-  top: 60px;
+.actionmenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   left: 10px;
+  top: 50px;
+  height: fit-content;
 }
+
 .EventSelector {
-  position: absolute;
-  top: 120px;
-  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
 }
+
 @media (max-width: 480px) {
-  .ThemeButton{
-    top: 100px;
-  }
-  .EventSelector{
-    top: 160px;
-  }
-  .location-info {
-    top: 15%;
-    margin-left: 100px;
+  .header h1 {
+    font-size: 15px;
   }
 }
+
 .Selector-Red {
   border: 2px solid red;
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
-  margin-bottom: 20px;
 }
+
 .Selector-Green {
   border: 2px solid green;
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
-  margin-bottom: 20px;
 }
+
 .DeSelector {
+  width: 35px;
+  height: 35px;
   padding: 2px;
-  margin-bottom: 20px;
 }
+
 .FetchFailed {
   position: absolute;
   margin: auto;
@@ -117,6 +124,7 @@ body {
   left: 15%;
   font-size: 3vw;
 }
+
 .SadFace {
   position: fixed;
   top: 15%;
@@ -124,6 +132,7 @@ body {
   font-size: 15vw;
   color: red;
 }
+
 .test {
   position: absolute;
   right: 1%;

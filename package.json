@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@iconify/icons-mdi": "^1.1.37",
+    "@mui/material": "^5.10.12",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
