@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Wildfire-Tracker/static/css/main.069d7e0d.chunk.css",
-    "main.js": "/Wildfire-Tracker/static/js/main.4a6f12bc.chunk.js",
-    "main.js.map": "/Wildfire-Tracker/static/js/main.4a6f12bc.chunk.js.map",
+    "main.js": "/Wildfire-Tracker/static/js/main.67c0486a.chunk.js",
+    "main.js.map": "/Wildfire-Tracker/static/js/main.67c0486a.chunk.js.map",
     "runtime-main.js": "/Wildfire-Tracker/static/js/runtime-main.3ea47e8e.js",
     "runtime-main.js.map": "/Wildfire-Tracker/static/js/runtime-main.3ea47e8e.js.map",
-    "static/js/2.f3ccb34b.chunk.js": "/Wildfire-Tracker/static/js/2.f3ccb34b.chunk.js",
-    "static/js/2.f3ccb34b.chunk.js.map": "/Wildfire-Tracker/static/js/2.f3ccb34b.chunk.js.map",
+    "static/js/2.9f6f3fba.chunk.js": "/Wildfire-Tracker/static/js/2.9f6f3fba.chunk.js",
+    "static/js/2.9f6f3fba.chunk.js.map": "/Wildfire-Tracker/static/js/2.9f6f3fba.chunk.js.map",
     "static/js/3.0b1da3d3.chunk.js": "/Wildfire-Tracker/static/js/3.0b1da3d3.chunk.js",
     "static/js/3.0b1da3d3.chunk.js.map": "/Wildfire-Tracker/static/js/3.0b1da3d3.chunk.js.map",
     "index.html": "/Wildfire-Tracker/index.html",
     "static/css/main.069d7e0d.chunk.css.map": "/Wildfire-Tracker/static/css/main.069d7e0d.chunk.css.map",
-    "static/js/2.f3ccb34b.chunk.js.LICENSE.txt": "/Wildfire-Tracker/static/js/2.f3ccb34b.chunk.js.LICENSE.txt",
+    "static/js/2.9f6f3fba.chunk.js.LICENSE.txt": "/Wildfire-Tracker/static/js/2.9f6f3fba.chunk.js.LICENSE.txt",
     "static/media/spinner.08e1278c.gif": "/Wildfire-Tracker/static/media/spinner.08e1278c.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.3ea47e8e.js",
-    "static/js/2.f3ccb34b.chunk.js",
+    "static/js/2.9f6f3fba.chunk.js",
     "static/css/main.069d7e0d.chunk.css",
-    "static/js/main.4a6f12bc.chunk.js"
+    "static/js/main.67c0486a.chunk.js"
   ]
 }
